@@ -4,3 +4,88 @@
 @media(max-width:1000px){.nav{gap:14px;font-size:11px}}
 @media(max-width:800px){.site-header{padding:16px 18px 0}.brand{font-size:20px}.menu{display:block;border:0;background:none;font-size:11px;font-weight:700}.nav{display:none;flex-direction:column;gap:14px}.nav.open{display:flex}.hero{grid-template-columns:1fr;min-height:auto;padding:60px 0}.hero-card{display:none}.hero h1,.listing h1,.article h1,.about h1{font-size:43px}.grid{grid-template-columns:1fr}.brief{grid-template-columns:1fr;padding:30px}.brief form{flex-direction:column;align-items:stretch}.brief small{grid-column:auto}.stats{grid-template-columns:1fr 1fr}.stats div:nth-child(2){border-right:0}.article-image{min-height:240px}.logo-cover{padding:30px 20px}.logo-pair{gap:12px}.logo-pair img{width:38%;height:85px;padding:10px}.deal-mark{font-size:24px}.logo-cover>p{margin-top:20px}.prose p{font-size:16px}.founder,.about-publication{grid-template-columns:1fr;gap:35px}.founder-copy h2{font-size:32px}.values{grid-template-columns:1fr}.values div{border-right:0}.about{padding-top:55px}.about>.dek{margin-bottom:35px}footer{margin:0 18px;display:block}.listing{padding-top:55px}}
 .brand-splash{position:fixed;inset:0;z-index:9999;background:var(--paper);display:flex;align-items:center;justify-content:center;animation:splashFade 700ms ease 1200ms forwards;pointer-events:none}.splash-brand{font-family:"Libre Baskerville",serif;font-size:clamp(28px,5vw,52px);font-weight:400;letter-spacing:.14em;line-height:1.05;text-align:center;display:flex;flex-direction:column;align-items:center}.splash-brand i{font-style:normal;color:var(--accent);font-size:1.35em;line-height:.8;letter-spacing:0;margin:12px 0;position:relative}.splash-brand i:before,.splash-brand i:after{content:"";position:absolute;top:50%;width:clamp(55px,10vw,110px);height:1px;background:var(--accent)}.splash-brand i:before{right:calc(100% + 18px)}.splash-brand i:after{left:calc(100% + 18px)}@keyframes splashFade{to{opacity:0;visibility:hidden}}@media(prefers-reduced-motion:reduce){.brand-splash{animation:none;opacity:0;visibility:hidden}}
+/* Premium editorial homepage */
+.home-header{max-width:1380px;padding:26px 42px 0}
+.home-header-row{display:grid;grid-template-columns:250px 1fr auto;align-items:center;gap:30px;border-bottom:1px solid var(--line);padding-bottom:22px}
+.home-header .brand{min-width:0;font-size:19px}
+.home-nav{justify-content:flex-end;align-items:center;border:0;padding:0;gap:28px;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.home-nav a{white-space:nowrap}
+.home-nav a.active{border-bottom:1px solid var(--accent);padding-bottom:8px}
+.home-main{max-width:1380px;margin:auto;padding:0 42px}
+.editorial-hero{display:grid;grid-template-columns:.88fr 1.12fr;gap:58px;align-items:stretch;padding:30px 0 38px;border-bottom:1px solid var(--line)}
+.editorial-copy{display:flex;flex-direction:column;justify-content:center;padding:35px 0}
+.editorial-copy h1{font-family:"Libre Baskerville",serif;font-size:clamp(42px,5.2vw,76px);line-height:1.08;font-weight:400;margin:12px 0 24px;max-width:690px}
+.editorial-copy .dek{font-size:17px;color:#555;max-width:560px;line-height:1.7}
+.outline-button{display:inline-flex;align-items:center;justify-content:space-between;gap:30px;width:max-content;border:1px solid var(--accent);padding:13px 18px;color:var(--ink);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-top:18px}
+.outline-button span{font-size:20px;line-height:.6;color:var(--accent)}
+.hero-feature{position:relative;display:block;min-height:470px;overflow:hidden;background:#222}
+.hero-feature img{width:100%;height:100%;min-height:470px;object-fit:cover;display:block;filter:saturate(.82)}
+.hero-feature:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(to bottom,transparent,rgba(0,0,0,.88))}
+.hero-feature-overlay{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:28px 30px;color:#fff}
+.feature-kicker{font-size:10px;letter-spacing:.16em;font-weight:700;color:#d1b16c;margin:0 0 8px}
+.hero-feature-overlay h2{font-family:"Libre Baskerville",serif;font-size:clamp(27px,3vw,43px);line-height:1.12;font-weight:400;margin:0 0 12px;max-width:760px}
+.hero-feature-overlay span{font-size:12px;color:#d1b16c;font-weight:600}
+.home-insights{padding:54px 0 68px}
+.home-section-head{display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid var(--line);padding-bottom:13px;margin-bottom:28px}
+.home-section-head h2{font-family:"Libre Baskerville",serif;font-size:28px;font-weight:400;margin:0;text-transform:uppercase;letter-spacing:.03em}
+.home-section-head h2:before{content:"";display:inline-block;width:34px;border-top:1px solid var(--accent);vertical-align:middle;margin-right:12px}
+.home-section-head a{font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+.home-section-head a span{font-size:18px;color:var(--accent);margin-left:5px}
+.insight-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.insight-card{min-width:0}
+.insight-image{display:block;height:205px;overflow:hidden;background:#ddd}
+.insight-image img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .35s ease}
+.insight-image:hover img{transform:scale(1.035)}
+.insight-copy{padding-top:15px}
+.insight-copy .kicker{margin:0 0 7px}
+.insight-copy h3{font-family:"Libre Baskerville",serif;font-size:22px;line-height:1.25;font-weight:400;margin:0 0 9px}
+.insight-copy p:not(.kicker){font-size:13px;color:#555;line-height:1.65;margin:0}
+.home-focus{background:#111;color:#fff;display:grid;grid-template-columns:repeat(4,1fr);margin:0 -42px;padding:38px 42px;gap:30px}
+.focus-item{display:flex;align-items:flex-start;gap:18px;border-right:1px solid #333;padding-right:22px}
+.focus-item:last-child{border-right:0}
+.focus-icon{font-family:"Libre Baskerville",serif;color:#c9ad70;font-size:36px;line-height:1}
+.focus-item h3{font-family:"Libre Baskerville",serif;font-size:18px;font-weight:400;margin:0 0 6px}
+.focus-item p{font-size:12px;line-height:1.55;color:#c4c4c4;margin:0;max-width:190px}
+.home-monitor{padding:62px 0 75px}
+.home-monitor>div:first-child{display:flex;justify-content:space-between;align-items:end;gap:30px}
+.home-monitor h2{font-family:"Libre Baskerville",serif;font-size:32px;font-weight:400;margin:6px 0 0;max-width:650px}
+.home-stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:30px}
+.home-stats div{padding:25px 20px;border-right:1px solid var(--line)}
+.home-stats div:last-child{border-right:0}
+.home-stats strong{display:block;font-family:"Libre Baskerville",serif;font-size:32px;font-weight:400}
+.home-stats span{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.1em;margin-top:4px}
+.home-footer{max-width:none;margin:0;background:#111;color:#aaa;border-top:0;padding:30px 42px;align-items:center}
+.home-footer .brand{color:#fff}
+.home-footer .brand i{color:#c9ad70}
+.home-footer p{margin:0}
+
+@media(max-width:1100px){
+  .home-header{padding-left:24px;padding-right:24px}
+  .home-header-row{grid-template-columns:200px 1fr}
+  .home-header .menu{display:none}
+  .home-nav{gap:16px;font-size:10px}
+  .home-main{padding:0 24px}
+  .home-focus{margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px}
+}
+@media(max-width:800px){
+  .home-header{padding:16px 18px 0}
+  .home-header-row{display:flex;justify-content:space-between;padding-bottom:15px}
+  .home-header .brand{font-size:18px}
+  .home-header .menu{display:block}
+  .home-nav{display:none;flex-direction:column;align-items:stretch;position:absolute;left:18px;right:18px;top:90px;background:var(--paper);z-index:20;padding:18px;border:1px solid var(--line)}
+  .home-nav.open{display:flex}
+  .home-main{padding:0 18px}
+  .editorial-hero{grid-template-columns:1fr;gap:25px;padding-top:22px}
+  .editorial-copy{padding:25px 0 10px}
+  .editorial-copy h1{font-size:42px}
+  .hero-feature,.hero-feature img{min-height:330px}
+  .insight-grid{grid-template-columns:1fr}
+  .insight-image{height:230px}
+  .home-focus{grid-template-columns:1fr 1fr;margin-left:-18px;margin-right:-18px;padding:30px 18px;gap:24px}
+  .focus-item{border-right:0;padding-right:0}
+  .home-monitor>div:first-child{display:block}
+  .home-stats{grid-template-columns:1fr 1fr}
+  .home-stats div:nth-child(2){border-right:0}
+  .home-footer{margin:0;padding:25px 18px;display:block}
+  .home-footer p{margin-top:15px}
+}
