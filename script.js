@@ -1,3 +1,3 @@
 document.querySelector('.menu')?.addEventListener('click',()=>document.querySelector('.nav')?.classList.toggle('open'));
 function subscribe(e){e.preventDefault();const n=document.getElementById('form-note');if(n)n.textContent='Thanks — connect this form to your email provider before launch.';return false;}
-(function(){if(!document.querySelector('link[href="light-theme.css"]')){const l=document.createElement('link');l.rel='stylesheet';l.href='light-theme.css';document.head.appendChild(l);}})();
+(function(){['light-theme.css','lawyer-illustration.css'].forEach(href=>{if(!document.querySelector('link[href="'+href+'"]')){const l=document.createElement('link');l.rel='stylesheet';l.href=href;document.head.appendChild(l);}});})();
