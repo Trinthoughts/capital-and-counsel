@@ -1,10 +1,10 @@
 document.querySelector('.menu')?.addEventListener('click',()=>document.querySelector('.nav')?.classList.toggle('open'));
 function subscribe(e){e.preventDefault();const n=document.getElementById('form-note');if(n)n.textContent='Thanks — connect this form to your email provider before launch.';return false;}
-(function(){['light-theme.css','lawyer-illustration.css','mobile.css','menu-mobile.css','mobile-menu-fix.css'].forEach(href=>{if(!document.querySelector('link[href="'+href+'"]')){const l=document.createElement('link');l.rel='stylesheet';l.href=href;document.head.appendChild(l);}})})();
+(function(){['light-theme.css','lawyer-illustration.css','mobile.css','menu-mobile.css'].forEach(href=>{if(!document.querySelector('link[href="'+href+'"]')){const l=document.createElement('link');l.rel='stylesheet';l.href=href;document.head.appendChild(l);}})})();
 (function(){
 const path=location.pathname.split('/').pop()||'index.html';
 const data={
-'deals.html':{label:'EDITORIAL · DEALS',image:'https://images.unsplash.com/photo-1554224155-bd4e04c3f2e6?auto=format&fit=crop&w=1800&q=85',alt:'Financial documents and calculator on a desk',caption:'Transactions examined through legal, financial and commercial lenses.'},
+'deals.html':{label:'EDITORIAL · DEALS',image:'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1800&q=85',alt:'Financial documents and calculator on a desk',caption:'Transactions examined through legal, financial and commercial lenses.'},
 'private-equity.html':{label:'PRIVATE CAPITAL',image:'https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1800&q=85',alt:'Financial analysis and documents on a desk',caption:'Sponsor strategy, acquisition structures, leverage and the legal mechanics of private capital.'},
 'financing.html':{label:'CAPITAL & FINANCING',image:'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1800&q=85',alt:'Financial documents and calculator on a desk',caption:'Debt, acquisition finance, capital structures and the financing decisions behind transactions.'},
 'private-client.html':{label:'PRIVATE CLIENT',image:'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85',alt:'Elegant private residence interior',caption:'Private client law, succession, wealth structuring and the legal issues that shape personal and family affairs.'},
