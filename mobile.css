@@ -28,8 +28,12 @@ main{width:100%;max-width:100%;padding-left:18px;padding-right:18px}
 
   .article{width:100%;max-width:100%;padding:55px 18px 75px}
   .article .dek{font-size:17px;line-height:1.65}
-  .article-image{width:100%;min-height:230px;height:auto;margin:28px 0 42px}
-  .article-image img{width:100%;height:auto;min-height:0;object-fit:cover}
+  .article-image{width:100%;min-height:0;height:auto;margin:28px 0 42px}
+  .article-image img{display:block;width:100%;height:auto;min-height:0;max-height:none;object-fit:contain}
+  .logo-cover{width:100%;min-height:300px;padding:28px 14px}
+  .logo-pair{width:100%;gap:12px;flex-direction:row}
+  .logo-pair img{width:45%;height:150px;max-width:45%;padding:10px;object-fit:contain}
+  .deal-mark{font-size:26px;flex:0 0 auto}
   .debt-cover{min-height:0!important;height:260px!important}
   .debt-cover>img{height:260px!important;min-height:0!important}
   .debt-cover-label{max-width:calc(100% - 36px);font-size:13px;gap:7px;line-height:1.4}
@@ -64,12 +68,17 @@ main{width:100%;max-width:100%;padding-left:18px;padding-right:18px}
   .note{width:100%;padding:20px;margin:35px 0}
   footer{width:auto;margin:0 18px;display:block}
 
+  /* All site menus, including article/section pages */
+  .site-header>.nav.open,.home-header .home-nav.open{display:flex!important;position:absolute!important;left:18px!important;right:18px!important;top:100%!important;z-index:1000!important;flex-direction:column!important;gap:0!important;padding:8px 0!important;background:#f4f1e9!important;color:#202328!important;border:2px solid #c9a35c!important;box-shadow:0 12px 28px rgba(0,0,0,.35)!important;visibility:visible!important;opacity:1!important}
+  .site-header>.nav.open a,.home-header .home-nav.open a{display:block!important;width:100%!important;box-sizing:border-box!important;padding:13px 18px!important;color:#202328!important;background:#f4f1e9!important;border-bottom:1px solid #d5d0c5!important;font-size:11px!important;letter-spacing:.06em!important;text-decoration:none!important}
+  .site-header>.nav.open a:last-child,.home-header .home-nav.open a:last-child{border-bottom:0!important}
+
   /* Home page */
   .home-header{padding:16px 18px 0}
   .home-header-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-bottom:16px}
   .home-header .brand{font-size:17px}
   .home-nav{display:none}
-  .home-nav.open{display:flex;position:absolute;left:18px;right:18px;top:76px;z-index:50;background:#171717;border:1px solid #343434;padding:16px;gap:12px}
+  .home-nav.open{display:flex}
   .home-main{width:100%;max-width:100%;padding:0 18px}
   .editorial-hero{grid-template-columns:1fr;gap:28px;padding:24px 0 34px}
   .editorial-copy{padding:22px 0 0}
