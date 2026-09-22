@@ -1,0 +1,12 @@
+/* Mobile image framing for deal articles */
+.article-image{width:100%;max-width:100%;box-sizing:border-box;overflow:hidden}
+.article-image img{max-width:100%;box-sizing:border-box}
+@media(max-width:700px){
+  .article-image{width:100%;max-width:100%;min-height:240px;margin-left:0;margin-right:0;overflow:hidden}
+  .article-image.image-one{background-size:cover;background-position:center center}
+  .logo-cover{width:100%;max-width:100%;padding:28px 14px;overflow:hidden}
+  .logo-pair{width:100%;max-width:100%;gap:10px;flex-wrap:nowrap;box-sizing:border-box}
+  .logo-pair img{width:calc((100% - 44px)/2);max-width:none;height:90px;padding:9px;box-sizing:border-box;object-fit:contain;flex:0 1 calc((100% - 44px)/2)}
+  .deal-mark{font-size:24px;flex:0 0 24px}
+  .logo-cover>p{max-width:100%;line-height:1.5}
+}
