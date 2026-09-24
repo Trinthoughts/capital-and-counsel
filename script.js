@@ -1,4 +1,5 @@
 document.querySelector('.menu')?.addEventListener('click',()=>document.querySelector('.nav')?.classList.toggle('open'));
+(function(){document.querySelectorAll('.nav').forEach(nav=>{if(!nav.querySelector('a[href="real-estate.html"]')){const anchor=nav.querySelector('a[href="private-wealth.html"]');if(anchor){anchor.insertAdjacentHTML('afterend','<a href="real-estate.html">Real Estate</a><a href="tax.html">Tax</a>')}}});})();
 function subscribe(e){e.preventDefault();const n=document.getElementById('form-note');if(n)n.textContent='Thanks — connect this form to your email provider before launch.';return false;}
 (function(){['light-theme.css','lawyer-illustration.css','mobile.css','menu-mobile.css'].forEach(href=>{if(!document.querySelector('link[href="'+href+'"]')){const l=document.createElement('link');l.rel='stylesheet';l.href=href;document.head.appendChild(l);}})})();
 (function(){
@@ -9,6 +10,8 @@ const data={
 'financing.html':{label:'CAPITAL & FINANCING',image:'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1800&q=85',alt:'Financial documents and calculator on a desk',caption:'Debt, acquisition finance, capital structures and the financing decisions behind transactions.'},
 'private-client.html':{label:'PRIVATE CLIENT',image:'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85',alt:'Elegant private residence interior',caption:'Private client law, succession, wealth structuring and the legal issues that shape personal and family affairs.'},
 'private-wealth.html':{label:'PRIVATE WEALTH',image:'https://images.unsplash.com/photo-1755307739588-0bf45e1e1ed6?auto=format&fit=crop&w=1800&q=85',alt:'Luxury yacht cruising on the ocean',caption:'Wealth preservation, investment structures, succession and the legal frameworks surrounding private capital.'},
+'real-estate.html':{label:'REAL ESTATE',image:'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85',alt:'Elegant modern property interior',caption:'Property transactions, development, investment and the legal structures behind real estate.'},
+'tax.html':{label:'TAX',image:'https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=1800&q=85',alt:'Tax and financial documents on a desk',caption:'Tax considerations across transactions, private wealth, corporate structures and investment.'},
 'legal-tech.html':{label:'LEGAL TECHNOLOGY',image:'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=85',alt:'Computer technology and circuitry',caption:'AI, legal technology, automation and the tools changing how lawyers research, review, draft and advise.'}
 };
 const d=data[path],main=document.querySelector('main.listing');if(!d||!main||main.querySelector('.section-hero'))return;
