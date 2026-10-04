@@ -20,3 +20,29 @@ html,body{max-width:100%;overflow-x:hidden}.home-main,.home-header{color:#f3f1eb
 .category-card-copy h3 a{color:#f3f1eb!important;text-decoration:none}
 .category-feature-copy h2 a:hover,
 .category-card-copy h3 a:hover{color:#ffffff!important;text-decoration:none}
+
+/* Uniform editorial category cards */
+.category-grid{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:22px!important}
+.category-card{display:flex;flex-direction:column;min-width:0;min-height:0!important;height:100%;padding:0 0 22px!important;border:0!important;border-right:1px solid #d9d4ca!important;background:#fff8ef!important;color:#171717!important}
+.category-card:last-child{border-right:0!important}
+.category-card>a{display:block;color:inherit}
+.category-card-media{height:205px!important;margin:0!important;overflow:hidden;background:#e8e3db}
+.category-card-media img{display:block;width:100%;height:100%;object-fit:cover}
+.category-card-copy{display:flex;flex-direction:column;flex:1;padding:18px 22px 0;background:#fff8ef!important;color:#171717!important}
+.category-card-copy .kicker{color:#a31d4d!important;font-size:11px!important;letter-spacing:.04em!important}
+.category-card-copy h2,.category-card-copy h2 a,.category-card-copy h3,.category-card-copy h3 a{font-family:"Libre Baskerville",serif;font-size:22px!important;line-height:1.28!important;font-weight:400!important;color:#111!important;margin:12px 0 12px!important;text-decoration:none!important}
+.category-card-copy p:not(.kicker){color:#454545!important;font-size:13px!important;line-height:1.6!important;margin:0!important}
+.category-card .read-link{color:#9a763d!important;margin-top:auto;padding-top:18px}
+.category-card.is-coming-soon{opacity:1}
+.category-card.is-coming-soon .category-card-media{filter:none;opacity:1}
+@media(max-width:1100px){
+.category-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.category-card:nth-child(2n){border-right:0!important}
+}
+@media(max-width:800px){
+.category-grid{grid-template-columns:1fr!important;gap:28px!important}
+.category-card{border-right:0!important;border-bottom:1px solid #d9d4ca!important;padding-bottom:24px!important}
+.category-card-media{height:220px!important}
+.category-card-copy{padding:16px 18px 0}
+.category-card-copy h2,.category-card-copy h2 a,.category-card-copy h3,.category-card-copy h3 a{font-size:23px!important}
+}
