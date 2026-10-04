@@ -76,13 +76,12 @@ if(!articles.length)return;
 list.className='category-feed';
 const head=document.createElement('div');
 head.className='category-feed-head';
-head.innerHTML='<h2>Latest analysis</h2><span>'+articles.length+' stories</span>';
+head.innerHTML='<h2>Top stories</h2><span>'+articles.length+' stories</span>';
 list.prepend(head);
 
 const articleImage=(article)=>{
 const link=article.querySelector('h2 a');
 const href=link?link.getAttribute('href'):'';
-const title=(link||article.querySelector('h2'))?.textContent.trim()||'';
 const images={
 'private-credit.html':'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85',
 'understanding-layers-of-debt.html':'https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1200&q=85',
@@ -93,27 +92,40 @@ const images={
 return images[href]||d.image;
 };
 
-articles.forEach((article,index)=>{
-article.classList.add(index===0?'category-feature':'category-card');
+const grid=document.createElement('div');
+grid.className='category-grid';
+articles.forEach((article)=>{
+article.classList.add('category-card');
 if(/COMING SOON/i.test(article.textContent))article.classList.add('is-coming-soon');
+
 const media=document.createElement('div');
-media.className=index===0?'category-feature-media':'category-card-media';
+media.className='category-card-media';
 const img=document.createElement('img');
 img.src=articleImage(article);
 img.alt='';
-img.loading=index===0?'eager':'lazy';
+img.loading='lazy';
 media.appendChild(img);
+
 const h2=article.querySelector('h2');
-if(h2&&h2.querySelector('a')){const a=document.createElement('a');a.href=h2.querySelector('a').href;a.appendChild(media);article.insertBefore(a,article.firstChild)}else article.insertBefore(media,article.firstChild);
+if(h2&&h2.querySelector('a')){
+const a=document.createElement('a');
+a.href=h2.querySelector('a').href;
+a.appendChild(media);
+article.insertBefore(a,article.firstChild);
+}else article.insertBefore(media,article.firstChild);
+
 const copy=document.createElement('div');
-copy.className=index===0?'category-feature-copy':'category-card-copy';
+copy.className='category-card-copy';
 while(article.children.length>1)copy.appendChild(article.children[1]);
 article.appendChild(copy);
-if(!/COMING SOON/i.test(article.textContent)){const read=document.createElement('span');read.className='read-link';read.textContent='Read article →';copy.appendChild(read)}
-});
-if(articles.length>1){
-const grid=document.createElement('div');grid.className='category-grid';
-articles.slice(1).forEach(a=>grid.appendChild(a));
-list.appendChild(grid);
+
+if(!/COMING SOON/i.test(article.textContent)){
+const read=document.createElement('span');
+read.className='read-link';
+read.textContent='Read article →';
+copy.appendChild(read);
 }
+grid.appendChild(article);
+});
+list.appendChild(grid);
 })();
