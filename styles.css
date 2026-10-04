@@ -12,3 +12,11 @@ html,body{max-width:100%;overflow-x:hidden}.home-main,.home-header{color:#f3f1eb
 .category-feature-copy h2 a,.category-card-copy h3 a{color:#f3f1eb}
 .category-feature-copy p:not(.kicker),.category-card-copy p:not(.kicker){color:#b9b9b9}
 .category-feature-copy .read-link,.category-card .read-link{color:#d1b16c}
+
+/* Category article title contrast fix */
+.category-feature-copy h2,
+.category-feature-copy h2 a,
+.category-card-copy h3,
+.category-card-copy h3 a{color:#f3f1eb!important;text-decoration:none}
+.category-feature-copy h2 a:hover,
+.category-card-copy h3 a:hover{color:#ffffff!important;text-decoration:none}
