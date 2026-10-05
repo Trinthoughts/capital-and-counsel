@@ -5,15 +5,15 @@ function subscribe(e){e.preventDefault();const n=document.getElementById('form-n
 (function(){
 const path=location.pathname.split('/').pop()||'index.html';
 const data={
-'deals.html':{label:'EDITORIAL · DEALS',image:'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1800&q=85',alt:'Financial documents and calculator on a desk'},
-'private-equity.html':{label:'PRIVATE CAPITAL',image:'https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1800&q=85',alt:'Financial analysis and documents on a desk'},
-'financing.html':{label:'CAPITAL & FINANCING',image:'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1800&q=85',alt:'Financial documents and calculator on a desk'},
-'private-client.html':{label:'PRIVATE CLIENT',image:'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85',alt:'Elegant private residence interior'},
-'private-wealth.html':{label:'PRIVATE WEALTH',image:'https://images.unsplash.com/photo-1755307739588-0bf45e1e1ed6?auto=format&fit=crop&w=1800&q=85',alt:'Luxury yacht cruising on the ocean'},
-'real-estate.html':{label:'REAL ESTATE',image:'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85',alt:'Elegant modern property interior'},
-'tax.html':{label:'TAX',image:'https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=1800&q=85',alt:'Tax and financial documents on a desk'},
-'legal-tech.html':{label:'LEGAL TECHNOLOGY',image:'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=85',alt:'Computer technology and circuitry'}
-};
+'deals.html':{label:'EDITORIAL · DEALS',image:'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1800&q=90',alt:'Financial documents and calculator on a desk',cards:['https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=90','https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=90','https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=90']},
+'private-equity.html':{label:'PRIVATE CAPITAL',image:'https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1800&q=90',alt:'Financial analysis and documents on a desk',cards:['https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=90','https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=90','https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=90']},
+'financing.html':{label:'CAPITAL & FINANCING',image:'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1800&q=90',alt:'Financial documents arranged on a desk',cards:['https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=1200&q=90','https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=89','https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=89']},
+'private-client.html':{label:'PRIVATE CLIENT',image:'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=90',alt:'Elegant private residence interior',cards:['https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=90','https://images.unsplash.com/photo-1600607688960-e095ff83135c?auto=format&fit=crop&w=1200&q=90','https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=90']},
+'private-wealth.html':{label:'PRIVATE WEALTH',image:'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1800&q=90',alt:'Luxury yacht at sea',cards:['https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=90','https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=90','https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1200&q=90']},
+'real-estate.html':{label:'REAL ESTATE',image:'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1800&q=90',alt:'Modern residential property interior',cards:['https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1200&q=90','https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=90','https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=89']},
+'tax.html':{label:'TAX',image:'https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=1800&q=90',alt:'Tax and financial documents on a desk',cards:['https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=90','https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1200&q=89','https://images.unsplash.com/photo-1554224154-a82b7e0f8b9d?auto=format&fit=crop&w=1200&q=90']},
+'legal-tech.html':{label:'LEGAL TECHNOLOGY',image:'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=90',alt:'Computer technology and circuitry',cards:['https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&q=90','https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=90','https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=90']}
+}
 const d=data[path],main=document.querySelector('main.listing');
 if(!d||!main||main.querySelector('.section-hero'))return;
 
@@ -79,19 +79,7 @@ head.className='category-feed-head';
 head.innerHTML='<h2>Top stories</h2><span>'+articles.length+' stories</span>';
 list.prepend(head);
 
-const articleImage=(article)=>{
-const link=article.querySelector('h2 a');
-const href=link?link.getAttribute('href'):'';
-const images={
-'private-credit.html':'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85',
-'understanding-layers-of-debt.html':'https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1200&q=85',
-'bodycote-veritas.html':'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=85',
-'spire-healthcare.html':'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1200&q=85',
-'ridge-cvc.html':'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85'
-};
-return images[href]||d.image;
-};
-
+const articleImage=(article,index)=>d.cards[index%d.cards.length];
 const grid=document.createElement('div');
 grid.className='category-grid';
 articles.forEach((article)=>{
@@ -101,7 +89,7 @@ if(/COMING SOON/i.test(article.textContent))article.classList.add('is-coming-soo
 const media=document.createElement('div');
 media.className='category-card-media';
 const img=document.createElement('img');
-img.src=articleImage(article);
+img.src=articleImage(article,grid.children.length);
 img.alt='';
 img.loading='lazy';
 media.appendChild(img);
